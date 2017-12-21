@@ -63,6 +63,8 @@ public class MemberRegistrationServlet extends HttpServlet {
             Member member;
             // create a new member, remember :) the memberservice do not
             // call the initMethod if an error occur during the previous persist request
+            System.out.println("registrationService='" + registrationService + "'");
+            System.out.println("memberListService='" + memberListService + "'");
 
             while ((member = registrationService.getNewMember()) == null) {
                 registrationService.initNewMember();

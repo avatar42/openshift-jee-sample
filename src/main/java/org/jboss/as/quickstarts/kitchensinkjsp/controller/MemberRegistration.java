@@ -63,7 +63,7 @@ public class MemberRegistration {
     public void register() throws Exception {
 
         try {
-//            log.info("Registering " + newMember.getName());
+            log.info("Registering " + newMember.getName());
             em.persist(newMember);
             memberEventSrc.fire(newMember);
             initNewMember();
